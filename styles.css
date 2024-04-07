@@ -1,0 +1,364 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.intro {
+    background-color: #d4e8d0;
+}
+
+.services {
+    background-color: #fff;
+}
+
+header {
+    background-color: #d4e8d0;
+}
+
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 53px;
+}
+
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+}
+
+h3 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 35px;
+}
+
+.beSafeimg {
+    height: 495px;
+    width: 406px;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    margin: 0 0 0 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 45px 0;
+}
+
+.introTxt {
+    flex: 1;
+}
+
+.img1 {
+    flex: 1;
+}
+
+header {
+    background-color: #d4e8d0;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.links ul li {
+    margin-right: 20px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+.links ul li:last-child {
+    margin-right: 0;
+}
+
+.links ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#loginBtn {
+    background-color: #ded3d3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.serviceCon {
+    margin: 0 0 0 128px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 0 185px 0;
+}
+
+.img2 {
+    flex: 1;
+    position: relative;
+    left: 50px;
+}
+
+.polImg {
+    height: 365px;
+    width: 590px;
+}
+
+.servList ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servList ul li {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.missTxt ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+}
+
+.logoTxt {
+    position: relative;
+    right: 130px;
+}
+
+.links {
+    position: relative;
+    right: 150px;
+}
+
+.navBtn {
+    position: relative;
+    right: 20px;
+}
+
+.missionCon {
+    margin: 0 0 0 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 205px 0;
+}
+
+.missTxt {
+    flex: 1;
+    position: relative;
+    bottom: 51px;
+    right: 170px;
+}
+
+.img3 {
+    flex: 1;
+}
+
+.missImg {
+    height: 365px;
+    width: 500px;
+}
+
+.servicesTxt {
+    position: relative;
+    bottom: 50px;
+}
+
+.missTxt ul li {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+}
+
+.Join {
+    background-color: #29742c;
+    text-align: center;
+    padding: 100px;
+}
+
+.joinTxt {
+    color: #fff;
+}
+
+.joinBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.LjoinBtn {
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.approach {
+    text-align: center;
+}
+
+.con2 {
+    display: flex;
+    position: relative;
+    left: 200px;
+}
+
+.appCon {
+    padding: 100px 0 100px 0;
+}
+
+.icons {
+    padding: 30px;
+}
+
+.aboutCon {
+    margin: 0 0 0 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0 205px 0;
+}
+
+.img4 {
+    position: relative;
+    right: 400px;
+}
+
+.aboutImg {
+    height: 550px;
+    width: 400px;
+}
+
+.aboutTxt {
+    text-align: justify;
+}
+
+.footer {
+    text-align: center;
+    background-color: black;
+    color: #fff;
+    padding: 100px;
+}
+
+.contact_form {
+    margin: auto;
+}
+
+.contact_img {
+    margin: 0 0 0 120px;
+}
+
+.contact_form form div {
+    margin: 0 0 0 80px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    width: 378px;
+    border: auto;
+    border-radius: 10px;
+}
+
+#submit_button{
+    background-color: blue;
+    color: #fff;
+    border-radius: 9px;
+    width: 167px;
+    margin: 0 0 0 82px;
+}
+#submit_button:hover{
+    cursor: pointer;
+}
+
+#heading {
+    margin: 61px 0 37px 0;
+    text-align: center;
+}
+
+#heading h1 {
+    font-family: 'Bebas Neue', cursive;
+    color: #0A4D68;
+    font-size: 100px;
+}
+
+.row {
+    display: flex;
+}
+
+.links ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #d4e8d0;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.links ul li:hover ul {
+    display: block;
+}
+
+.links ul li ul li {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    text-align: left;
+}
+
+.links ul li ul li:hover {
+    background-color: #fff;
+    cursor: pointer;
+}

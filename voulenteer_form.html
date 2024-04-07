@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Registration</title>
+    <link rel="stylesheet" href="volunteer_form.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+</head>
+
+<body>
+    <h2>Volunteer Registration Form</h2>
+    <form id="volunteer-form" action="volunteer_submission.php" method="post" enctype="multipart/form-data">
+        <!-- Personal Information -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" required><br><br>
+
+        <label for="id-proof">Upload Proof of ID:</label>
+        <input type="file" id="id-proof" name="id_proof" required><br><br>
+
+        <!-- Contact Information -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br><br>
+
+        <!-- Additional Information -->
+        <label for="occupation">Occupation:</label>
+        <input type="text" id "occupation" name="occupation"><br><br>
+
+        <label for="place">Current Place:</label>
+        <input type="text" id="place" name="place"><br><br>
+
+        <label for="event">Event Name to Volunteer:</label>
+        <input type="text" id="event" name="event"><br><br>
+
+        <input type="checkbox" id="accept" name="accept" required>
+        <label for="accept">I accept all the rules and regulations.</label><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="qrcode">
+        
+    </div>
+
+    <script src="volunteer_form.js"></script>
+
+</body>
+
+</html>

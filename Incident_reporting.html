@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Reporting</title>
+    <link rel="stylesheet" type="text/css" href="incident_reporting.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../../../images/Capture.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div>
+                <img class="logo" src="../../../images/flat-design-safety-logo-template_23-2149336546.avif" alt="">
+            </div>
+            <div class="logoTxt">
+                <h2>SafeZone Community Network</h2>
+            </div>
+            <div class="links">
+                <ul>
+                    <a href="../../../index.html">
+                        <li>Home</li>
+                    </a>
+                    <li>Services
+                        <ul class="submenu">
+                            <a href="Incident_reporting.html">
+                                <li>Incident Reporting System</li>
+                            </a>
+                            <a href="../education/education.html">
+                                <li>Education and Awarness</li>
+                            </a>
+                            <li>Emergency Alert</li>
+                        </ul>
+                    </li>
+                    <a href="../../../contact.html">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="navBtn">
+                <a href="../login/login.html" id="loginBtn">Login</a>
+                <a href="../signup/signup.html" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <h2 id="heading">Incident Reporting System</h2>
+    <div class="navBtns">
+        <div class="navibtns">
+            <a href="#Contactinfo">1. Contact Information</a>
+        </div>
+        <div class="line"></div>
+        <div class="navibtns">
+            <a href="#incidentDes">2. Incident Description</a>
+        </div>
+        
+    </div>
+    <div class="incidentFrm">
+        <div class="design-box"></div>
+        <div class="id">
+            <form action="">
+                <label for="impacted-user">I am:</label>
+                <input type="radio" id="impacted-user" name="user-type" value="impacted"> <span
+                    class="impacted-text">Impacted User</span>
+                <input type="radio" id="reporting" name="user-type" value="reporting"> <span
+                    class="impacted-text">Reporting on behalf of the Impacted User</span>
+            </form>
+        </div>
+        <div class="form-container">
+            <form action="http://localhost:3000/incident-report" method="POST" id="incidentForm">
+                <section id="Contactinfo">
+                    <h4>1. Contact Information</h4>
+                    <div class="ele">
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" class="custom-input">
+                    </div>
+                    <div class="ele">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" class="custom-input">
+                    </div>
+                    <div class="ele">
+                        <label for="mobile_number">Mobile number</label>
+                        <input type="number" name="mobile_number" class="custom-input">
+                    </div>
+                    <br>
+                    <div class="ele">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" class="custom-input">
+                    </div>
+                </section>
+                <hr>
+                <section id="incidentDes">
+                    <h4>2. Incident Description</h4>
+                    <div class="ele2">
+                        <label for="">When was this incident detected?</label>
+                        <div class="dateBox">
+                            <input type="date" name="" id="dateInput" class="dateTime"> <input type="time"
+                                id="timeInput" class="dateTime">
+                        </div>
+                    </div>
+                    <div class="ele2">
+                        <label for="">Please enter a brief description of the incident:</label>
+                        <input type="textarea" class="desBox">
+                    </div>
+                </section>
+                <hr>
+                <!-- <section id="impactDetails">
+                    <h4>3. Impact Details</h4>
+                    <div class="ele3">
+                        <label for="">Upload Incident photos</label>
+                        <input type="file" name="image" id="image" accept="image/*" multiple required>
+                        <div id="imageContainer"></div>
+                    </div>
+                </section> -->
+                <hr id="end">
+                <div class="frmFooter">
+                    <div class="Frmbtns">
+                        <button type="reset">Reset Form</button>
+                    </div>
+                    <div class="Frmbtns">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <section class="footer">
+        <p>Copyright © SafeZoneNetwork.com| All rights reserved</p>
+    </section>
+    <script src="incident_reporting.js"></script>
+    <script>
+    app.post('/incident-report', async (req, res) => {
+        try {
+            const { firstName, lastName, mobileNumber, email, incidentDate, incidentDescription, incidentPhotos } = req.body;
+    
+            // Create a new incident report with received data
+            const newIncidentReport = new IncidentReport({
+                firstName,
+                lastName,
+                mobileNumber,
+                email,
+                incidentDate,
+                incidentDescription,
+                incidentPhotos
+            });
+    
+            // Save the new incident report
+            await newIncidentReport.save();
+    
+            // Send success response
+            res.status(201).json({ message: 'Incident report created successfully' });
+        } catch (error) {
+            // Handle errors
+            console.error('Error creating incident report:', error);
+            res.status(500).json({ error: error.message });
+        }
+    });
+</script> 
+
+</body>
+
+</html>

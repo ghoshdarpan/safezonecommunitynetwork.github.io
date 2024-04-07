@@ -1,0 +1,110 @@
+/* Styles for the header */
+*{
+    margin:0px;
+    padding: 0px;
+}
+header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Styles for the main content */
+main {
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style for article cards */
+.article-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+.host_form {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+
+/* Style for event cards */
+.event-container {
+    display: flex;
+    overflow: hidden;
+}
+
+/* Apply hover effect */
+.event-card:hover {
+    transform: scale(1.05); /* Enlarge the card on hover */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    z-index: 1; /* Elevate the card on hover */
+}
+
+/* Add an animation for events */
+.event-card {
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.5s;
+}
+
+/* Add an animation for events */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply the rotate animation to event cards on hover */
+.event-card:hover {
+    animation: rotate 0.5s linear; /* Apply the animation on hover */
+}
+
+
+/* Apply the fade-in animation to event cards */
+.event-card {
+    animation: fadeIn 0.5s ease-in-out; /* Apply the animation to all event cards */
+}
+
+
+/* ... Your existing CSS styles ... */
+
+/* Style for event cards and container */
+
+
+
+
+/* Apply a transition effect for smooth card sliding */

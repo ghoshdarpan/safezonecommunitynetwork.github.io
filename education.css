@@ -1,0 +1,41 @@
+.eduHeading{
+    text-align: center;
+    background-color: #428744;
+    margin: 0;
+    color: #fff;
+    margin-top: 60px;
+    padding: 80px;
+}
+.infoContainer{
+    margin: 10px 115px 10px 115px;
+}
+.videoContainer{
+    margin: 10px 115px 10px 115px;
+}
+.assessment{
+    display: inline-block;
+    width: 870px;
+    margin: 10px 115px 30px 115px;
+    border: 2px solid black;
+}
+.assessmentH{
+    margin: 10px 115px 10px 115px;
+}
+.question{
+    padding: 5px;
+}
+.design-box {
+    background-color: rgb(94, 94, 202);
+    border-bottom: 2px solid;
+    padding: 20px;
+}
+#gradingBtn{
+    margin: 10px;
+    background-color: rgb(94, 94, 202);
+    border: none;
+    color: white;
+    width: 100px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}

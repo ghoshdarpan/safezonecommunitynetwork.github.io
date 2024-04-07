@@ -1,0 +1,175 @@
+.navBtns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid #ccc;
+    margin-left: 50px;
+    height: 50px;
+    width: 900px;
+    padding: 10px;
+}
+.navibtns {
+    background-color: rgb(238 238 252);
+    padding: 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+.navibtns a {
+    color: rebeccapurple;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+.navibtns:hover {
+    background-color: rebeccapurple;
+    cursor: pointer;
+}
+
+.navibtns:hover a {
+    color: white;
+}
+
+.navBtns button{
+    height: 43px;
+}
+h4 {
+    font-size: 25px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.box {
+    border: 1px solid;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.design-box {
+    background-color: rgb(94, 94, 202);
+    border-bottom: 2px solid;
+    padding: 20px;
+}
+
+.line {
+    flex: 1;
+    border-top: 1px solid #000;
+    margin: 0 5px;
+    height: 0;
+}
+
+.form-container {
+    margin: 25px;
+}
+
+.contactinfo {
+    font-size: 0;
+}
+
+.ele {
+    padding: 10px;
+    display: inline-block;
+    width: 280px;
+    box-sizing: border-box;
+}
+
+label {
+    font-family: 'Roboto Condensed', sans-serif;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.incidentFrm {
+    border: 2px solid black;
+    margin: 10px 50px 50px 50px;
+}
+
+.custom-input {
+    height: 37px;
+    width: 250px;
+    border: 1px solid #ccc;
+    transition: border 0.3s,
+}
+
+.custom-input:focus {
+    outline: none;
+    border: 5px solid #007bff;
+    border-radius: 7px;
+}
+
+.id {
+    margin: 10px;
+}
+
+.impacted-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.id form {
+    display: flex;
+    align-items: center;
+}
+
+hr {
+    background-color: rgb(94, 94, 202);
+    height: 5px;
+}
+
+.dateTime {
+    font-size: 16px;
+    height: 44px;
+    width: 135px;
+    border: 1px solid #ccc;
+    transition: border 0.3s,
+}
+
+.dateTime:focus {
+    outline: none;
+    border: 5px solid #007bff;
+    border-radius: 7px;
+}
+
+.desBox {
+    height: 109px;
+    width: 506px;
+    border: 1px solid #ccc;
+    transition: border 0.3s,
+}
+
+.desBox:focus {
+    outline: none;
+    border: 5px solid #007bff;
+    border-radius: 7px;
+}
+
+.ele2 {
+    padding-bottom: 26px;
+}
+
+#end {
+    background-color: black;
+    height: 0px;
+}
+
+.frmFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.Frmbtns button {
+    background-color: lightcoral;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Frmbtns button:hover {
+    background-color: #ff6666;
+}

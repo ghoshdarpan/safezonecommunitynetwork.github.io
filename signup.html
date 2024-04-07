@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../../../images/Capture.PNG" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div>
+                <img class="logo" src="../../../images/flat-design-safety-logo-template_23-2149336546.avif" alt="">
+            </div>
+            <div class="logoTxt">
+                <h2>SafeZone Community Network</h2>
+            </div>
+            <div class="links">
+                <ul>
+                    <a href="../../../index.html">
+                        <li>Home</li>
+                    </a>
+                    <li>Services
+                        <ul class="submenu">
+                            <a href="../incidentReport/Incident_reporting.html">
+                                <li>Incident Reporting System</li>
+                            </a>
+                        <li>Education and Awarness</li>
+                            </a>
+                            <li>Emergency Alert</li>
+                        </ul>
+                    </li>
+                    <a href="../../../contact.html">
+                        <li>Contact Us</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="navBtn">
+                <a href="../login/login.html" id="loginBtn">Login</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="inner">
+            <img src="../../../images/image-1.png" alt="" class="image-1">
+            <form action="">
+                <h3>New Account?</h3>
+                <div class="form-holder">
+                    <span class="lnr lnr-user"></span>
+                    <input type="text" id="name" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-phone-handset"></span>
+                    <input type="text" id="phoneNumber" class="form-control" placeholder="Phone Number">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-envelope"></span>
+                    <input type="email" id="email" class="form-control" placeholder="Mail">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password" id="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr lnr-lock"></span>
+                    <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm Password">
+                </div>
+                <button>
+                    <span>Register</span>
+                </button>
+            </form>
+            <img src="../../../images/image-2.png" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <section class="footer">
+        <p>Copyright © SafeZoneNetwork.com| All rights reserved</p>
+    </section>
+
+    <script>
+
+       // Add an event listener to the form submit event
+document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Call signUp() function
+    signUp();
+});
+
+async function signUp() {
+    const name = document.querySelector('#name').value;
+    const phoneNumber = document.querySelector('#phoneNumber').value;
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    const confirmPassword = document.querySelector('#confirmPassword').value;
+
+    if (password !== confirmPassword) {
+        console.error('Passwords do not match');
+        return;
+    }
+
+    try {
+        const response = await fetch('http://localhost:3000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ name, phoneNumber, email, password })
+        });
+
+        console.log('Sign up successful');
+
+        // Redirect to login page
+        window.location.href = '../login/login.html';
+    } catch (error) {
+        console.error('Error signing up:', error);
+    }
+}
+</script>
+</body>
+
+</html>
